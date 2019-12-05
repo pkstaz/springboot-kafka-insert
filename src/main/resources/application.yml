@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  kafka:
+    ssl:
+      key-password: admin123
+      keystore-location: client.keystore.jks
+      keystore-password: admin123
+      truststore-location: client.truststore.jks
+      truststore-password: admin123
+    producer:
+      bootstrap-servers: my-cluster-kafka-brokers:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
